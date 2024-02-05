@@ -1,10 +1,15 @@
 const express = require("express"); 
 
 const app = express(); 
+const { connect } = require ('./bd')
+connect();
 
 app.get("/", (req, res) => 
+{ 
+    res.send("Express on Vercel"); 
+}); 
 
-{ res.send("Express on Vercel"); }); 
+
 
 const PORT = process.env.PORT || 5000; 
 
